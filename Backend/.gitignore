@@ -1,0 +1,4 @@
+.env
+vir_env
+db.sqlite3
+**/_pycache_/
