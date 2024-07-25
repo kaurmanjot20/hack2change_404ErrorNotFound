@@ -1,20 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo1.png';
+
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-      <img src={logo} alt="Logo" />
-        <h1>Agrobee</h1>
+        
+        <h1>AgroSphere</h1>
       </div>
       <div className="navbar-links">
-        <Link to="/">Home</Link>
-        <Link to="/shop">Crop Prediction</Link>
-        <Link to="/community">Irrigation Monitoring</Link>
-        <Link to="/orders">Data Analytics</Link>
-        <Link to="/report">Support</Link>
-        <Link to="/settings">Settings</Link>
+        <NavLink exact to="/" activeClassName="active-link">Home</NavLink>
+        <NavLink to="/crops" activeClassName="active-link">Crop Prediction</NavLink>
+        <NavLink to="/irrigation" activeClassName="active-link">Irrigation Monitoring</NavLink>
+        <NavLink to="/data" activeClassName="active-link">Data Analytics</NavLink>
+        <NavLink to="/support" activeClassName="active-link">Support</NavLink>
+        <NavLink to="/settings" activeClassName="active-link">Settings</NavLink>
       </div>
     </nav>
   );
