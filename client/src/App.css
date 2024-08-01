@@ -286,3 +286,56 @@ body, html {
 .data-item p strong {
   color: #333;
 }
+/*  CROP PREDICTION */
+.crop-prediction {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.crop-prediction h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.crop-prediction form {
+  display: grid;
+  gap: 15px;
+}
+
+.crop-prediction .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.crop-prediction label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.crop-prediction input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.crop-prediction button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.crop-prediction button:hover {
+  background-color: #45a049;
+}
