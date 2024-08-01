@@ -32,10 +32,10 @@ export default function CropPrediction() {
   };
 
   return (
-    <div>
+    <div className="crop-prediction">
       <h2>Crop Prediction</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label htmlFor="State_Name">State:</label>
           <input
             type="text"
@@ -46,7 +46,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="Crop_Type">Crop Type:</label>
           <input
             type="text"
@@ -57,7 +57,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="Crop">Crop:</label>
           <input
             type="text"
@@ -68,7 +68,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="N">Nitrogen:</label>
           <input
             type="number"
@@ -79,7 +79,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="P">Phosphorus:</label>
           <input
             type="number"
@@ -90,7 +90,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="K">Potassium:</label>
           <input
             type="number"
@@ -101,18 +101,18 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
-          <label htmlFor="ph">pH:</label>
+        <div className="form-group">
+          <label htmlFor="pH">pH:</label>
           <input
             type="number"
-            id="ph"
-            name="ph"
-            value={formData.ph}
+            id="pH"
+            name="pH"
+            value={formData.pH}
             onChange={handleChange}
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="rainfall">Rainfall:</label>
           <input
             type="number"
@@ -123,7 +123,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="temperature">Temperature:</label>
           <input
             type="number"
@@ -134,7 +134,7 @@ export default function CropPrediction() {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label htmlFor="Area_in_hectares">Area in hectares:</label>
           <input
             type="number"
