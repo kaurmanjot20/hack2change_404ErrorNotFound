@@ -26,8 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')])
 
 # Application definition
 
@@ -41,6 +40,10 @@ INSTALLED_APPS = [
     
     # OWN APPS
     'users',
+    'sensors',
+    'rest_framework',
+    'corsheaders',
+    'ai_ml_model',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +54,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ALLOWED_ALL_ORIGINS = config('CORS_ALLOWED_ALL_ORIGINS', default=False, cast=bool)
+
+CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', cast=lambda v: [s.strip() for s in v.split(',')])
+
+CORS_ALLOW_METHODS = config('CORS_ALLOW_METHODS', cast=lambda v: [s.strip() for s in v.split(',')])
+
+CORS_ALLOW_HEADERS = config('CORS_ALLOW_HEADERS', cast=lambda v: [s.strip() for s in v.split(',')])
 
 ROOT_URLCONF = 'AgroSphere.urls'
 
