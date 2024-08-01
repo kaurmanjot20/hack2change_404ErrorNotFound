@@ -14,6 +14,7 @@ export default function CropPrediction() {
     temperature: '',
     Area_in_hectares: ''
   });
+  const [prediction, setPrediction] = useState(null);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -24,10 +25,10 @@ export default function CropPrediction() {
     try {
       const response = await axios.post('http://127.0.0.1:8000/ml_model/predict/', formData);
       console.log(response.data);
-      // Handle the response data as needed (e.g., display prediction results)
+      setPrediction(response.data.prediction);
     } catch (error) {
       console.error('Error submitting form:', error);
-      // Handle errors (e.g., display error message to user)
+      setPrediction(null);
     }
   };
 
@@ -147,6 +148,12 @@ export default function CropPrediction() {
         </div>
         <button type="submit">Submit</button>
       </form>
+      {prediction !== null && (
+        <div className="prediction-result">
+          <h3>Prediction Result:</h3>
+          <p>{JSON.stringify({ prediction })}</p>
+        </div>
+      )}
     </div>
   );
 }
