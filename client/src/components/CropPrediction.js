@@ -151,7 +151,7 @@ export default function CropPrediction() {
       {prediction !== null && (
         <div className="prediction-result">
           <h3>Prediction Result:</h3>
-          <p>{JSON.stringify({ prediction })}</p>
+          <p>{JSON.stringify(prediction)}</p>
         </div>
       )}
     </div>
