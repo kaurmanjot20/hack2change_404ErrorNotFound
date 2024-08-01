@@ -32,10 +32,7 @@ export default function DataAnalytics() {
             <p><strong>DHT Humidity:</strong> {item.dht_humidity}</p>
             <p><strong>DHT Temperature:</strong> {item.dht_temperature}</p>
             <p><strong>Soil Moisture:</strong> {item.soil_moisture}</p>
-            <p><strong>Rain:</strong> {item.rain}</p>
             <p><strong>Light:</strong> {item.light}</p>
-            <p><strong>Analog Temperature:</strong> {item.analog_temperature}</p>
-            <p><strong>Digital Temperature:</strong> {item.digital_temperature}</p>
           </div>
         ))}
       </div>
